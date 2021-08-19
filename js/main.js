@@ -16,7 +16,7 @@ $(document).ready(function () {
         currentFloor++; // прибваляем этаж
         usCurrentFloor = currentFloor.toLocaleString("en-US", {minimumIntegerDigits: 2, useGrouping: false}); // форматируем при выводе, добавляем 0 перед номером этажа
         $(".counter").text(usCurrentFloor); // записываем в счетчик номер этажа
-        floorPath.removeClass("current-floor") // удаляем активный класс у всех этажей
+        floorPath.removeClass("current-floor"); // удаляем активный класс у всех этажей
         $(`[data-floor=${usCurrentFloor}]`).toggleClass('current-floor'); // добавляем активный класс для текущего этажа, подсвечивем текущий этаж
         }
         
@@ -28,7 +28,7 @@ $(document).ready(function () {
         currentFloor--;
         usCurrentFloor = currentFloor.toLocaleString("en-US", {minimumIntegerDigits: 2, useGrouping: false});
         $(".counter").text(usCurrentFloor);
-        floorPath.removeClass("current-floor")
+        floorPath.removeClass("current-floor");
         $(`[data-floor=${usCurrentFloor}]`).toggleClass('current-floor');
         }
         
