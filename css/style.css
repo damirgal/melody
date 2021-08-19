@@ -134,3 +134,7 @@ body {
   padding: 16px 32px;
   cursor: pointer;
 }
+
+path.current-floor {
+  opacity: 1;
+}
