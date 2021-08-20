@@ -242,3 +242,16 @@ path.current-floor {
   cursor: pointer;
   background-color: #fff;
 }
+
+.current-flat {
+  color: #3596f5;
+  text-decoration: underline;
+}
+
+path.current-flat2 {
+  opacity: 1;
+}
+
+path.current-flat3 {
+  opacity: 0;
+}

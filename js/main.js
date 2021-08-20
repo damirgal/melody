@@ -6,6 +6,12 @@ $(document).ready(function () {
     var modal = $(".modal");
     var modalCloseButton = $(".modal-close-button");
     var viewFlatsButton = $(".view-flats");
+    var flatPath = $(".modal-image path"); // каждая отдельная квартира
+    var flatList = $(".flat-list a"); //список квартир
+
+    //var flatPath2 = $(".modal-image path"); //список квартир
+    
+    
 
     // функция при наведении указателя мыши на этаж
     floorPath.on("mouseover", function(){
@@ -47,5 +53,19 @@ $(document).ready(function () {
         modal.toggleClass('is-open');
     }
 
+    // функция при наведении указателя мыши на квартиру
+    flatPath.on("mouseover", function(){
+        flatList.removeClass("current-flat"); // удаление активного класса у кватриры
+        currentFlat = $(this).attr("data-flat"); // получаем значение у текущей квартиры
+        $(`[id=${currentFlat}]`).toggleClass('current-flat'); // выделяем жирным выбранную квартиру справа
+    });
+
+    // функция при наведении указателя мыши на список квартир
+    flatList.on("mouseover", function(){
+        flatList.removeClass("current-flat"); // удаление активного класса у кватриры
+        flatPath.removeClass("current-flat2"); // удаление активного класса у кватриры
+        currentFlat = $(this).attr("id"); // получаем значение у текущей квартиры из списка
+        $(`[data-flat=${currentFlat}]`).addClass('current-flat2'); // выделяем выбранную квартиру
+    });
 
 });
