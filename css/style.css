@@ -255,3 +255,21 @@ path.current-flat2 {
 path.current-flat3 {
   opacity: 0;
 }
+
+.footer {
+  margin-top: 20px;
+  background-color: #635854;
+  padding: 12px 0;
+  border-top: 4px solid #3596f5;
+  display: flex;
+}
+
+.footer-div {
+  max-width: 1280px;
+  margin: auto;
+  display: flex; /* сделали блок гибким */
+  justify-content: space-between; /* расставили элкементы по краям */
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+}
